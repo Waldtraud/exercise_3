@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exercise
+namespace exercise_3
 {
     internal abstract class Player
     {
@@ -31,6 +31,18 @@ namespace exercise
         {
             Console.WriteLine($"{Name} - Hp {Hp}, Damage {Damage}, {_level} level");
         }
+
+        public virtual void ReceiveDamage(Enemy enemy)
+        {
+            Hp-=enemy.Damage;
+            Console.WriteLine($"{this.Name} recive {enemy.Damage} damage");
+        }
+
+        public virtual void Attack()
+        {
+            Console.WriteLine($"{Name} ")
+        }
+
     }
     
 }

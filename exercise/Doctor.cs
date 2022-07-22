@@ -8,9 +8,16 @@ namespace exercise_3
 {
      class Doctor: Player
     {
-        public int Protection { get; private set; }
+        private float _protection;
+        public float Protection { get => _protection; private set => _protection = value; }
+   
     public int Agility { get; private set; }
 
+        public Doctor(float protection, int agility): base()
+        {
+            Protection = protection;            
+            Agility = agility;
+        }
     }
     
     
